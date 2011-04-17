@@ -1,0 +1,80 @@
+May 23, 2007
+
+We want this to be battery-powered, so we'll let V_dd=3V
+
+Characteristics of CD4093BE at V_dd=3V, V_in in sinusoidal at 1kHz:
+
+V_P = 1.5V
+V_N = 1.2V
+V_H = V_P - V_N = 0.3V
+V_t = (V_P + V_N) / 2 = 1.35
+
+V_H seems to be frequency-dependant, so if V_in is 10 kHz, V_H = 0.42V, and the transitions are more curvy.
+
+Electrode Capacitance looks to be on the order of tens of picofarads.
+
+Circuit Simulation (draft1.asc):
+if the electrode capacitance is 10 pF, f_out = 66 kHz and V_p-p = 230 mV. The amplitude of the sum component of the heterodyne signal is 58 mV. Typical hysterysis voltage for the LM2917 is 60mV, so this might cause problems with frequency detection. We'll see.
+
+The frequency of the fixed oscillator is 780 kHz and the variable oscillator is at 718 kHz
+After heterodyning the signals, it looks like the high frequency is also at 718 kHz, and the lower frequency is at 65 kHz
+
+
+6/3/2007
+I'm realizing that for the freq-to-voltage converter to generate 0-5V, I'm going to need a larger supply. Lets switch to 9V.
+
+With a supply voltage of 9, the output frequency is 324 kHz and the noise frequency is 2.3 MHz if the input capacitance is 20pF. The frequency of the variable oscillator is 1.9 MHz and the fixed oscillator is at 2.3 MHz. So lets use a lowpass filter with a cutoff at 1 MHz.
+
+Using a filter at 1MHz, the signal amplitude is about 1.5V and the noise amplitude is about 600 mV.
+
+6/4/07
+I scrapped the 2-pole filter design, and am back to a 1-pole with a cutoff of 21 kHz. This causes the amplitude to decrease, but it gets rid of the noise and even at its smallest the amplitude should be big enough to trigger the frequency-to-voltage converter.
+
+
+6/11/07
+Got the PCB all done, but it's not performing as well as before, so I probably just need to change some component values.
+
+With a copper-clad board as an electrode, the variable oscillator runs at about 625 kHz when not sensing anything, and 400 kHz when my hand is touching the electrode
+
+The fixed oscillator runs at 926 kHz when the tuning pot is all the way to the right, and 571 kHz when all the way to the left.
+
+So after heterodyning, the difference component should vary between 0 and 225 kHz, and the sum component should vary between 1.25 MHz and 1.025 MHz
+
+So the filter should have a 3dB point of around 200 kHz. A 4.7k Resistor with a 1 nF capacitor gives us a 3dB point of 213 Hz.
+
+Running the LED off of the output voltage is a bad idea. It's impossible to calibrate the device below about 1.5V resting voltage, which is unacceptable. The LED should trigger at about 0.4V.
+
+6/14/07
+Seems like I also need to adjust the components that control the treshholds of the LM2917, because the voltage is topping out well before my hand reaches the electrode. It seems that right now that output voltage is topping out when the output frequency is 22.2 kHz
+
+So 5.25V = 7.5V * 22.2 kHz * 1nF * 47kOhm * k
+which means that k=0.67. (RC = 47us)
+
+I want my top frequency to be 62 kHz, so RC = 16.1 us. so I basically need to cut RC by 1/3.
+
+
+After replacing the oscillator caps with 33 pF, I get more range, but now I need to change my filter cutoff and recalibrate the frequency-to-voltage converter.
+
+It looks like the noise frequency is 1.42 MHz
+
+Fixed Oscillator: 1.2 MHz -> 1.85 MHz
+Variable Oscillator: 1.31 MHz -> 1 MHz
+
+The highest output frequency it looks like we want is 400 kHz, so lets shoot for a 3dB point of a bit less than that.
+
+....
+Strange behavior from the frequency-to-voltage converter. It's possible that I'm pushing it at too high a frequency. perhaps I need to go back down to my previous components.
+
+
+Enclosure Stuff:
+
+Hole Diameters:
+
+Power Jack: 7/16
+Mounting Screw Shaft: 1/8
+Mounting Screw Counter-Sink: 13/64
+Banana Plug: 21/64
+Binding Post: 1/8
+Adjustment Hole: 9/64
+
+british airways 177

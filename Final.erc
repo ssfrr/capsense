@@ -1,0 +1,11 @@
+EAGLE Version 4.16r2 Copyright (c) 1988-2006 CadSoft
+
+Electrical Rule Check for /home/srussell/Documents/Capacitive Distance Sensor/Final.sch at  6/05/2007 12:29:05 
+
+WARNING: Sheet 1/1: POWER Pin IC1P VSS connected to GND
+WARNING: Sheet 1/1: POWER Pin IC1P VDD connected to VCC
+
+Board and schematic are consistent
+
+    0 errors
+    2 warnings

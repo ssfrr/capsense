@@ -1,0 +1,46 @@
+Photoplotter Info File: /home/srussell/Electronics Projects/CapSense/Rev4.gpi
+
+ Date              :  7/11/2007 17:09:46 
+ Plotfile          : /home/srussell/Electronics Projects/CapSense/Rev4.sts
+ Apertures         : generated: 
+ Device            : Gerber photoplotter with RS-274-X aperture generation
+
+Parameter settings:
+
+ Emulate Apertures : no
+ Emulate Thermal   : no
+ Emulate Annulus   : no
+ Tolerance Draw  + :  0.00 %
+ Tolerance Draw  - :  0.00 %
+ Tolerance Flash + :  0.00 %
+ Tolerance Flash - :  0.00 %
+ Rotate            : no
+ Mirror            : yes
+ Optimize          : yes
+ Auto fit          : yes
+ OffsetX           : 0inch
+ OffsetY           : 0inch
+
+Plotfile Info:
+
+ Coordinate Format : 2.4
+ Coordinate Units  : Inch
+ Data Mode         : Absolute
+ Zero Suppression  : None
+ End Of Block      : *
+
+Apertures used:
+
+ Code     Shape     Size                  used
+
+ D10      round     0.1340inch               3
+ D11      octagon   0.0710inch               3
+ D12      round     0.0710inch               3
+ D13      oval      0.0600inch x 0.1120inch    22
+ D14      octagon   0.0680inch              12
+ D15      octagon   0.0600inch              11
+ D16      octagon   0.0640inch               2
+ D17      oval      0.1730inch x 0.0905inch     4
+ D18      oval      0.0905inch x 0.1730inch     2
+ D19      round     0.2180inch               1
+

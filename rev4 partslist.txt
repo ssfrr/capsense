@@ -1,0 +1,29 @@
+Partlist
+
+Exported from Rev4.sch at  7/11/2007 15:05:41 
+
+EAGLE Version 4.16r2 Copyright (c) 1988-2006 CadSoft
+
+Part     Value              Device             Package      Library         Sheet
+
+C1       1uF                CPOL-USE2.5-5      E2,5-5       rcl             1
+C2       100pF              C-US050-030X075    C050-030X075 rcl             1
+C3       100pF              C-US050-030X075    C050-030X075 rcl             1
+C4       10nF               C-US050-030X075    C050-030X075 rcl             1
+C5       1uF                CPOL-USE2.5-5      E2,5-5       rcl             1
+C6       250pF              C-US075-032X103    C075-032X103 rcl             1
+C7       22nF               C-US025-025X050    C025-025X050 rcl             1
+C8       1uF                CPOL-USE2.5-5      E2,5-5       rcl             1
+IC1      4093N              4093N              DIL14        40xx            1
+LM2917                      DIL8               DIL08        ic-package      1
+R1       15k                R-US_0414/15       0414/15      rcl             1
+R2       15k                R-US_0414/15       0414/15      rcl             1
+R3       5k                 TRIM_US-B25P       B25P         pot             1
+R4       2.2k               R-US_0414/15       0414/15      rcl             1
+R5       4.7k               R-US_0414/15       0414/15      rcl             1
+R6       47k                R-US_0414/15       0414/15      rcl             1
+R7       20k                R-US_0414/15       0414/15      rcl             1
+VAUD     MOUNT-PAD-ROUND2.8 MOUNT-PAD-ROUND2.8 2,8-PAD      holes           1
+X1                          MSTBV2             MSTBV2       con-phoenix-500 1
+X2                          MSTBV2             MSTBV2       con-phoenix-500 1
+X3                          MSTBV2             MSTBV2       con-phoenix-500 1

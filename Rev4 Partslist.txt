@@ -1,0 +1,29 @@
+Partlist
+
+Exported from Rev4.brd at  6/15/2007 17:46:45 
+
+EAGLE Version 4.16r2 Copyright (c) 1988-2006 CadSoft
+
+Part     Value              Package      Library         Position (inch)       Orientation
+
+C1       1uF                E3,5-10      rcl             (0.125 1.05)          R270
+C2       100pF              C050-030X075 rcl             (0.625 1.45)          R180
+C3       100pF              C050-030X075 rcl             (0.575 0.4)           R90
+C4       10nF               C050-030X075 rcl             (1.275 0.875)         R270
+C5       1uF                E3,5-10      rcl             (1.575 1.125)         R270
+C6       330pF              C050-030X075 rcl             (1.675 0.6)           R270
+C7       22nF               C050-030X075 rcl             (1.825 0.6)           R270
+C8       220nF              C050-030X075 rcl             (1.875 1.525)         R270
+IC1      4093N              DIL14        40xx            (0.725 0.9)           R0
+LM2917                      DIL08        ic-package      (2.025 1.075)         R0
+R1       15k                0414/15      rcl             (1.025 0.275)         R180
+R2       15k                0414/15      rcl             (0.925 1.7)           R0
+R3       5k                 B25P         pot             (1.125 1.45)          R0
+R4       4.7k               0414/15      rcl             (0.975 1.2)           R0
+R5       4.7k               0414/15      rcl             (1.525 0.4)           R90
+R6       47k                0414/15      rcl             (1.975 0.4)           R90
+R7       20k                0414/15      rcl             (2.175 0.4)           R90
+VAUD     MOUNT-PAD-ROUND2.8 2,8-PAD      holes           (1.275 0.575)         R0
+X1                          MSTBV2       con-phoenix-500 (0.275 0.4)           R90
+X2                          MSTBV2       con-phoenix-500 (1.525 1.625)         R0
+X3                          MSTBV2       con-phoenix-500 (0.225 1.525)         R90
